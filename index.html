@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes colorChange {
+          0% { color: rgb(255, 0, 0); }
+          25% { color: blue; }
+          50% { color: green; }
+          75% { color: purple; }
+          100% { color: pink; }
+        }
+        
+        .color-changing-text {
+          animation: colorChange 5s infinite;
+          font-size: 30px;
+          font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Portfolio</h1>
+        <ul>
+            <li><i id="menu-close"class="fa fa-window-close" ></i></li>
+            <li><a  class="active"href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+           
+           
+        </ul>
+
+        <img src="/portimages/356889-200.png" id="menu-button"alt="">
+    </nav>
+
+    <header>
+
+        <div class="main">
+            <div class="left">
+                <h3>Hi, Everyone</h3>
+                <h1>This Udhayan S</h1>
+                <h3>College Student</h3>
+                <p>
+                    I am a 20 aged student pursuing B.sc(Computer Science) <br>
+                    I am very interested with creating websites.
+                </p>
+                <p class="color-changing-text">See Below to know about me!.</p>
+                
+            </div>
+            <div class="right">
+                <img src="portimages/Screenshot_20230218_095414_Instagram.jpg" alt="">
+            </div>
+            
+        </div>
+    </header>
+        
+    <section class="about">
+
+            <div class="om">        
+                   <img src="portimages/trust (4).png" alt=""> 
+                   <p>I finished my Higher Secondary School in Year of 2021
+                     <br> I scored 88% 
+                   </p>
+            </div>
+
+            <div class="om">        
+                   <img src="portimages/trust (6).png" alt=""> 
+                   <p>I am pursuing III B.sc(Computer Science) in <br>Government Arts College <br>
+                    I have CGPA of 8.5 widht grade of A. 
+                   </p>
+            </div>
+            
+        
+    </section>
+
+ <section id="contact">
+    <h1>Contact </h1>
+    <form id="two">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter Name" required><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required style="margin-top: 10px;"><br>
+        <label for="message" style="margin-left: -10px;">Message</label>
+        <textarea id="message" name="message" rows="5" required style="margin-right:20px; margin-top:10px; border-radius:10px;"></textarea><br>
+        <input style="align-items:center;" type="submit" value="Submit">
+    </form>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementsById('two').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            alert('Form submitted!\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+        });
+    });
+</script>
+    
+</body>
+</html>
